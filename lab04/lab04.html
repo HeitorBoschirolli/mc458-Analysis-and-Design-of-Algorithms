@@ -1,0 +1,110 @@
+
+<!-- saved from url=(0052)https://susy.ic.unicamp.br:9999/mc458a/P4/enunc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+</head>
+
+<body><h2>MC458A - Projeto e Análise de Algoritmos I</h2>
+
+<p>
+Lehilton Pedrosa<br>
+Hugo Kooki Kasuya Rosado
+</p>
+
+<hr>
+
+<h2>Exercício de Programação 04</h2>
+
+<ul>
+  <li><b>Prazo de submissão:</b> 13 de Novembro</li>
+  <li>O exercício deve ser implementado em C++</li>
+  <li>Número máximo de submissões: 10</li>
+  <li>Tempo máximo de execução: <b>1s</b></li>
+  <!--<li>Limite de memória: 50 MB</li>-->
+</ul>
+
+<h2>Planejamento de Estoque de Sorvete</h2>
+
+<p>
+Roberto é um jovem empreendedor que sempre quis ter sua própria sorveteria. Em 2017 ele conseguiu seu próprio estabelecimento, mas por falta de planejamento, o lucro bruto quase não foi suficiente para pagar os gastos da sua loja.
+</p>
+<p>
+Todo domingo, Roberto encomenda uma leva de sorvetes para suprir a demanda da semana, mesmo que o custo de manter todo o sorvete seja muito caro. Felizmente, Roberto sempre sabe com antecedência o custo do frete para encomendar sorvete e a demanda de sorvete dos próximos N dias. Roberto também sabe que ele gasta uma quantia H por pote de sorvete que ele mantém por noite no freezer. Ajude Roberto descobrir o menor custo necessário para atender toda a demanda dos próximos N dias!
+</p>
+
+<b>Entrada:</b>
+Na primeira linha da entrada são dados dois valores: um número natural H, referente ao custo de manter um pote de sorvete durante uma noite e um número natural N de dias. Na segunda linha, há um vetor K com o custo do frete de cada um dos N dias e, na terceira, um vetor D com a demanda de potes de sorvete desses próximos N dias.
+<p></p>
+
+<p>
+<b>Saída:</b>
+O menor custo que Roberto poderia gastar atendendo toda a demanda dos próximos N dias. 
+</p>
+
+<p>
+<b>Observações:</b>
+</p><ul>
+  <li>A encomenda sempre chega antes da loja abrir, o sorvete é vendido durante o dia e o custo de manter os sorvetes são pagos apenas se eles passarem a noite no estabelecimento.</li>
+  <li>O custo de frete de uma encomenda não depende do número de potes encomendados.</li>
+  <li>Seu Algoritmo deve ter complexidade O(N<sup>2</sup>).</li>
+</ul>
+<p></p>
+
+<b>Exemplos:</b><br>
+
+<pre>Entrada:
+1 5
+5 5 4 4 8
+5 2 5 1 3
+</pre>
+
+<pre>Saída:
+18
+</pre>
+
+<p>
+As decisões adotadas para obter o custo acima, de uma solução ótimal, foram:<br>
+</p><ul>
+<li>dia 1: Encomendar 7 potes ($5). Sobram 2 potes que passam a noite no estabelecimento ($2).</li>
+<li>dia 2: Não fazer encomenda ($0). Todos os potes são consumidos ($0).</li>
+<li>dia 3: Encomendar 9 potes ($4). Sobram 4 potes que passam a noite no estabelecimento ($4).</li>
+<li>dia 4: Não fazer encomenda ($0). Sobram 3 potes que passam a noite no estabelecimento ($3).</li>
+<li>dia 5: Não fazer encomenda ($0). Nunca deve-se sobrar sorvete no último dia ($0).</li>
+<li><b>Custo total:</b> $18.</li>
+</ul>
+<p></p>
+
+<b>Relatório:</b> É <b>obrigatório</b> a inclusão, no cabeçalho do arquivo do seu código, um comentário com 100 a 300 palavras, explicando sua solução incluindo uma justificativa sucinta da complexidade. Nesse relatório é obrigatório definir o subproblema e escrever a recorrência correspondente.
+Não é necessário fazer uma prova formal, mas você deve argumentar por que sua solução funciona.
+<p></p>
+
+<b>Dicas:</b>
+<ul>
+  <li>Tente lembrar-se das técnicas e algoritmo que permitem a resolução na complexidade desejada.</li>
+  <li>Existem pelo menos dois testes difíceis; se você fizer apenas uma programação dinâmica padrão sem pensar muito, é possível 
+  que seu código não execute no tempo e espaço requerido; se quiser passar em todos os testes, faça uma tabela compacta e 
+  estudo onde pode have otimizações no seu código.</li>
+</ul>
+<p></p>
+
+<b> Observações: </b>
+<ul>
+  <li>O SuSy utiliza o GCC 4.4.7 20120313 (Red Hat 4.4.7-17). São utilizadas as seguintes flags para compilação:</li>
+  <ul>
+    <li>C++: <font face="courier">-ansi -pedantic -Wall -lm -O</font></li>
+  </ul>
+  <li>O nome do arquivo contendo o seu código deve ser p3.cpp</li>
+  <li>Alguns dos testes no Susy possuem entradas bem grandes. Tenha paciência ao enviar seu programa pois pode demorar alguns segundos. Sempre teste seu programa localmente com os testes abertos, antes de submeter.</li>
+  <li>Seu algoritmo deve executar em tempo O(N<sup>2</sup>), em que N é a quantidade de dias. Lembre-se que alocação de memória (mesmo memória estática alocada na pilha) influi na complexidade de tempo. <b>Passe vetores por referência sempre que possível</b>.</li>
+  <li>A quantidade de elementos pode ser muito grande, então utilize long int.</li>
+  <!--li><b>Não é permitido o uso de variáveis do tipo static</b></li-->
+  <li>A nota do exercício é proporcional ao número de casos de teste que você acertar; são dados 10 casos de teste, sendo 6 abertos e 4 fechados, valendo 1 ponto cada.</li>
+  <li>No entanto, <b>implementações com complexidade de tempo fora do especificado receberão penalidades ou até nota zero no exercício</b>.<br>
+  Isto poderá ser verificado através de casos de teste fechados adicionais, com tamanho de entrada maior, executados fora do SuSy pelo monitor.</li>
+  <li>Sugerimos que você utilize a classe std::vector, de C++, para facilitar o seu trabalho.</li>
+  <li><b>Trechos de código copiados da Internet ou de coleguinhas configuram plágio.</b></li>
+  <!--li>Sugerimos que você use scanf para fazer a leitura da entrada, a fim de garantir que seu código execute no tempo especificado.</li-->
+  <li>Seu código deve estar identado, modularizado e bem comentado. Identifique-se e deixe claro quais estruturas de dados e algoritmos foram utilizados.</li>
+</ul>
+<hr>
+</body></html>

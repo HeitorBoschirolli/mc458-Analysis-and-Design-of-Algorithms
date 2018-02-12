@@ -1,0 +1,97 @@
+
+<!-- saved from url=(0052)https://susy.ic.unicamp.br:9999/mc458a/P2/enunc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+</head>
+
+<body><h2>MC458A - Projeto e Análise de Algoritmos I</h2>
+
+<p>
+Lehilton Pedrosa<br>
+Hugo Kooki Kasuya Rosado
+</p>
+
+<hr>
+
+<h2>Exercício de Programação 02</h2>
+
+<ul>
+  <li><b>Prazo de submissão:</b> 09 de Outubro</li>
+  <li>O exercício deve ser implementado em C++</li>
+  <li>Número máximo de submissões: 10</li>
+  <li>Tempo máximo de execução: 10s</li>
+  <!--<li>Limite de memória: 50 MB</li>-->
+</ul>
+
+<h2>Corte de Árores velhas</h2>
+
+<p>
+Infelizmente, as árvores mais velhas oferecem risco de tombamento e precisam ser
+cortadas. Para definir que árvores serão cortadas, Bia estipulou alguns critérios.
+</p><ul>
+  <li>Uma espécie é considerada jovem se pelo menos 60% de suas árvores tiverem idade no máximo 60% da maior idade entre todas as k espécies. Por exemplo, suponha que a maior idade é 100, então a espécie A com árvores de idades {10,20,30,40,50,60,70,80,90,100} é considerada jovem, enquanto
+a espécie B com árvores de idades {1,1,1,1,1,70,70,70,70,70} não é.</li>
+  <li>Se uma espécie não é jovem, então a árvore mais velha dessa espécie deve ser cortada.</li>
+</ul>
+Bia explicou porque não conseguiu fazer o algoritmo: “a minha dificuldade é que, quando eu marco a árvore mais velha de todas para ser cortada, outras espécies podem deixar de ser jovens”. Ajude Bia a contar quantas árvores precisam ser cortadas!
+<p></p>
+
+<p>
+A cada iteração, seu algoritmo deve ser capaz de identificar a árvore mais velha de todas (dentre todas as espécies) e então cortar a mais velha de cada espécie não jovem. O algoritmo deve parar quando todas as espécies presentes forem jovens. 
+</p>
+<p>
+Por exemplo, suponha que as nos nos são dadas duas espécies, espécie A com árvores de idades {10,20,30,40,50,70,70,80,90,100} e espécie B com árvores de idades {1,1,1,1,1,70,70,70,70,70}. Na primeira iteração seu algoritmo deve identificar que a árvore mais velha dentre todas tem idade 100, verificar que ambas as espécies não são jovens e então cortar a árvore mais velha de cada espécie. Note que na próxima iteração a árvore mais velha de todas tem idade 90.
+</p>
+
+<p>
+<b>Entrada:</b>
+Na primeira linha da entrada é dado um único número natural referente ao número k de espécies. Da segunda linha em diante cada uma linha fornece informações sobre uma única espécie. O primeiro valor de cada uma dessas linhas se referente à quantidade de árvores dessa espécie e os valores que se seguem representam as idades de cada árvore dessa mesma espécie. (Obs: As idades são fornecidas em ordem crescente).
+</p>
+
+<p>
+<b>Saída:</b> O número de árvores cortadas.
+</p>
+
+<b>Exemplos:</b><br>
+
+<pre>Entrada:
+2
+10 10 20 30 40 50 60 70 80 90 100
+10 1 1 1 1 1 70 70 70 70 70
+</pre>
+
+<pre>Saída:
+2
+</pre>
+
+<b>Relatório:</b> você deve incluir, no cabeçalho do arquivo do seu código, um comentário com 100 a 300 palavras, explicando sua solução.
+Não é necessário fazer uma prova formal, mas você deve argumentar por que sua solução funciona.
+<p></p>
+
+<b>Dicas:</b>
+<ul>
+  <li>Tente lembrar dos algoritmos de ordenação vistos em sala de aula.</li>
+</ul>
+<p></p>
+
+<b> Observações: </b>
+<ul>
+  <li>O SuSy utiliza o GCC 4.4.7 20120313 (Red Hat 4.4.7-17). São utilizadas as seguintes flags para compilação:</li>
+  <ul>
+    <li>C++: <font face="courier">-ansi -pedantic -Wall -lm</font></li>
+  </ul>
+  <li>O nome do arquivo contendo o seu código deve ser p2.cpp</li>
+  <li>Alguns dos testes no Susy possuem entradas bem grandes. Tenha paciência ao enviar seu programa pois pode demorar alguns segundos. Sempre teste seu programa localmente com os testes abertos, antes de submeter.</li>
+  <li>Seu algoritmo deve executar em tempo O(m log(k)), em que m é o número total de árvores e k é o número de espécies. Lembre-se que alocação de memória (mesmo memória estática alocada na pilha) influi na complexidade de tempo.</li>
+  <!--li><b>Não é permitido o uso de variáveis do tipo static</b></li-->
+  <li>A nota do exercício é proporcional ao número de casos de teste que você acertar; são dados 10 casos de teste, sendo 5 abertos e 5 fechados, valendo 1 ponto cada.</li>
+  <li>No entanto, <b>implementações com complexidade de tempo fora do especificado receberão penalidades ou até nota zero no exercício</b>.<br>
+  Isto poderá ser verificado através de casos de teste fechados adicionais, com tamanho de entrada maior, executados fora do SuSy pelo monitor.</li>
+  <li>Sugerimos que você utilize a classe std::vector e procure como utilizar o std::make_heap, em na biblioteca "algorithm", de C++, para facilitar o seu trabalho.</li>
+  <li><b>Trechos de código copiados da Internet ou de coleguinhas configuram plágio.</b></li>
+  <!--li>Sugerimos que você use scanf para fazer a leitura da entrada, a fim de garantir que seu código execute no tempo especificado.</li-->
+  <li>Seu código deve estar identado, modularizado e bem comentado. Identifique-se e deixe claro quais estruturas de dados e algoritmos foram utilizados.</li>
+</ul>
+<hr>
+
+</body></html>

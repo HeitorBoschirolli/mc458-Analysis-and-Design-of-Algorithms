@@ -1,0 +1,98 @@
+
+<!-- saved from url=(0054)https://susy.ic.unicamp.br:9999/mc458a/P3.1/enunc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+</head>
+
+<body><h2>MC458A - Projeto e Análise de Algoritmos I</h2>
+
+<p>
+Lehilton Pedrosa<br>
+Hugo Kooki Kasuya Rosado
+</p>
+
+<hr>
+
+<h2>Exercício de Programação 03</h2>
+
+<ul>
+  <li><b>Prazo de submissão:</b> 30 de Outubro</li>
+  <li>O exercício deve ser implementado em C++</li>
+  <li>Número máximo de submissões: 10</li>
+  <li>Tempo máximo de execução: 10s</li>
+  <!--<li>Limite de memória: 50 MB</li>-->
+</ul>
+
+<h2>Separadores Binários</h2>
+
+<p>
+Seja k = 2<sup>x</sup>-1, x ∈ ℕ\{0} e seja A[] um vetor com n = (b+1)*k+b elementos, b ∈ ℕ\{0}. Os k-separadores binários de A[] são os elementos que dividem o vetor A[], <b>quando ordenado</b>, em k+1 subvetores de tamanhos iguais. Por exemplo, se A[]=[1,2,3,4,5,6,7], então os 3-separadores binários de A[] são A[1]=2, A[3]=4 e A[5]=6, pois dividem A[] nos subvetores [1], [3], [5] e [7].
+</p>
+<p>
+Emanuel, um garoto muito curioso, resolveu criar um programa para o problema e concluiu que não é possível criar um algoritmo cuja complexidade seja menor que O(n*log(n)), pois esse é o tempo mínimo necessário para ordenar o vetor A[].
+</p>
+<p>
+Ensine ao Emanuel que é possível bolar um algoritmo mais eficiente para resolver esse problema utilizando técnicas mais sofisticadas! O seu algoritmo deve possuir complexidade de tempo O(n*log(k)), em que n é a quantidade de números da entrada e k é a quantidade de separadores binários.
+</p>
+
+<b>Entrada:</b>
+Na primeira linha da entrada são dados dois valores: um número natural n, referente ao tamanho do vetor a ser lido, e um número natural k, que é a quantidade de separadores binários. Na segunda, segue-se uma sequência de valores inteiros do vetor de entrada A[]. Utilize long int, pois o tamanho do vetor e os elementos nele podem ser muito grandes.
+<p></p>
+
+<p>
+<b>Saída:</b>
+O valor dos separadores binários do vetor A[] em ordem crescente.
+</p>
+
+<b>Exemplos:</b><br>
+
+<pre>Entrada:
+5 1
+-1 4 3 -2 5
+</pre>
+
+<pre>Saída:
+3
+</pre>
+
+<pre>Entrada:
+7 3
+-1 5 -3 -2 9 7 0
+</pre>
+
+<pre>Saída:
+-2 0 7
+</pre>
+
+<b>Relatório:</b> É <b>obrigatório</b> a inclusão, no cabeçalho do arquivo do seu código, um comentário com 100 a 300 palavras, explicando sua solução incluindo uma justificativa sucinta da complexidade.
+Não é necessário fazer uma prova formal, mas você deve argumentar por que sua solução funciona.
+<p></p>
+
+<b>Dicas:</b>
+<ul>
+  <li>Tente-se lembrar das técnicas e algoritmo que permitem a resolução na complexidade desejada.</li>
+  <li>Se você planejar implementar um algoritmo aleatório, use a função srand() da biblioteca stdlib.h com seed (o argumento) "0", i.e., use srand(0) para manter o tempo consistente (<b>é necessário sempre a inicialização do rand pelo comando srand(0)</b>). Nesse caso, você pode presumir que a complexidade é igual à esperança da complexidade.</li>
+</ul>
+<p></p>
+
+<b> Observações: </b>
+<ul>
+  <li>O SuSy utiliza o GCC 4.4.7 20120313 (Red Hat 4.4.7-17). São utilizadas as seguintes flags para compilação:</li>
+  <ul>
+    <li>C++: <font face="courier">-ansi -pedantic -Wall -lm</font></li>
+  </ul>
+  <li>O nome do arquivo contendo o seu código deve ser p3.cpp</li>
+  <li>Alguns dos testes no Susy possuem entradas bem grandes. Tenha paciência ao enviar seu programa pois pode demorar alguns segundos. Sempre teste seu programa localmente com os testes abertos, antes de submeter.</li>
+  <li>Seu algoritmo deve executar em tempo O(n*log(k)), em que n é a quantidade de números da entrada e k é a quantidade de separadores binários. Lembre-se que alocação de memória (mesmo memória estática alocada na pilha) influi na complexidade de tempo. <b>Passe vetores por referência sempre que possível</b>.</li>
+  <li>A quantidade de elementos pode ser muito grande, então utilize long int.</li>
+  <!--li><b>Não é permitido o uso de variáveis do tipo static</b></li-->
+  <li>A nota do exercício é proporcional ao número de casos de teste que você acertar; são dados 10 casos de teste, sendo 5 abertos e 5 fechados, valendo 1 ponto cada.</li>
+  <li>No entanto, <b>implementações com complexidade de tempo fora do especificado receberão penalidades ou até nota zero no exercício</b>.<br>
+  Isto poderá ser verificado através de casos de teste fechados adicionais, com tamanho de entrada maior, executados fora do SuSy pelo monitor.</li>
+  <li>Sugerimos que você utilize a classe std::vector, de C++, para facilitar o seu trabalho.</li>
+  <li><b>Trechos de código copiados da Internet ou de coleguinhas configuram plágio.</b></li>
+  <!--li>Sugerimos que você use scanf para fazer a leitura da entrada, a fim de garantir que seu código execute no tempo especificado.</li-->
+  <li>Seu código deve estar identado, modularizado e bem comentado. Identifique-se e deixe claro quais estruturas de dados e algoritmos foram utilizados.</li>
+</ul>
+<hr>
+</body></html>
